@@ -8,9 +8,14 @@ variable "common_name" {
 
 variable "subject_alternative_names" {
   description = "SANs for letsencrypt"
-  default     = [""]
+  default     = []
 }
 
 variable "bucket" {
   description = "Bucket to place certs"
+}
+
+variable "min_days_remaining" {
+  description = "The minimum amount of days remaining on the expiration of a certificate before a renewal is attempted"
+  default     = 14
 }
