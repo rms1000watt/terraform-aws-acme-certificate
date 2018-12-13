@@ -18,3 +18,10 @@ resource "aws_s3_bucket_object" "cert_pem" {
   content      = "${local.certificate_certificate_pem}"
   content_type = "text/plain"
 }
+
+resource "aws_s3_bucket_object" "cert_only_pem" {
+  key          = "${local.name_cert_only_pem}"
+  bucket       = "${local.bucket}"
+  content      = "${local.certificate_certificate_only_pem}"
+  content_type = "text/plain"
+}

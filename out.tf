@@ -22,6 +22,10 @@ output "certificate_pem" {
   value = "${local.out_certificate_pem}"
 }
 
+output "certificate_only_pem" {
+  value = "${local.out_certificate_only_pem}"
+}
+
 output "issuer_pem" {
   value = "${local.out_issuer_pem}"
 }
